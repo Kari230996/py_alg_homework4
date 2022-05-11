@@ -41,23 +41,23 @@ def first_example():
 
 #print(first_example())
 
-print(timeit.timeit('first_example', number=100, globals=globals())) # SIZE 10, 1.8000000636675395e-06
-print(timeit.timeit('first_example', number=100, globals=globals())) # SIZE 100, 1.8000000636675395e-06
-print(timeit.timeit('first_example', number=100, globals=globals())) # SIZE 1000, 2.099999619531445e-06
-print(timeit.timeit('first_example', number=100, globals=globals())) # SIZE 100000, 2.499999936844688e-06
-print(timeit.timeit('first_example', number=100, globals=globals())) # SIZE 1000000, 1.8999999156221747e-06
+print(timeit.timeit('first_example()', number=100, globals=globals())) # SIZE 10, 0.00011560000007193594
+print(timeit.timeit('first_example()', number=100, globals=globals())) # SIZE 100, 0.0009262999999464228
+print(timeit.timeit('first_example()', number=100, globals=globals())) # SIZE 1000, 0.010326200000008612
+print(timeit.timeit('first_example()', number=100, globals=globals())) # SIZE 100000, 0.894484299999931
+print(timeit.timeit('first_example()', number=100, globals=globals())) # SIZE 1000000, 9.329238400000008
 
 cProfile.run('first_example()')
 
 '''
-         5 function calls in 0.131 seconds
+         5 function calls in 0.138 seconds
 
    Ordered by: standard name
 
    ncalls  tottime  percall  cumtime  percall filename:lineno(function)
-        1    0.000    0.000    0.130    0.130 <string>:1(<module>)
-        1    0.130    0.130    0.130    0.130 homework_4_1.py:27(first_example)
-        1    0.000    0.000    0.131    0.131 {built-in method builtins.exec}
+        1    0.000    0.000    0.138    0.138 <string>:1(<module>)
+        1    0.138    0.138    0.138    0.138 homework_4_1.py:27(first_example)
+        1    0.000    0.000    0.138    0.138 {built-in method builtins.exec}
         1    0.000    0.000    0.000    0.000 {built-in method builtins.len}
         1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
 '''
@@ -74,23 +74,23 @@ def second_example():
 
 #print(second_example())
 print()
-print(timeit.timeit('second_example', number=100, globals=globals())) # SIZE 10, 1.7999991541728377e-06
-print(timeit.timeit('second_example', number=100, globals=globals())) # SIZE 100, 1.5999976312741637e-06
-print(timeit.timeit('second_example', number=100, globals=globals())) # SIZE 1000, 1.800006430130452e-06
-print(timeit.timeit('second_example', number=100, globals=globals())) # SIZE 100000, 1.800006430130452e-06
-print(timeit.timeit('second_example', number=100, globals=globals())) # SIZE 1000000, 1.7999991541728377e-06
+print(timeit.timeit('second_example()', number=100, globals=globals())) # SIZE 10, 0.0001260000000229411
+print(timeit.timeit('second_example()', number=100, globals=globals())) # SIZE 100, 0.00046499999996285624
+print(timeit.timeit('second_example()', number=100, globals=globals())) # SIZE 1000, 0.003298599999993712
+print(timeit.timeit('second_example()', number=100, globals=globals())) # SIZE 100000, 0.3074466000000484
+print(timeit.timeit('second_example()', number=100, globals=globals())) # SIZE 1000000, 3.187567700000045
 
 cProfile.run('second_example()')
 
 '''
-12 function calls in 0.031 seconds
+         12 function calls in 0.032 seconds
 
    Ordered by: standard name
 
    ncalls  tottime  percall  cumtime  percall filename:lineno(function)
-        1    0.000    0.000    0.031    0.031 <string>:1(<module>)
-        1    0.000    0.000    0.031    0.031 homework_4_1.py:65(second_example)
-        1    0.000    0.000    0.031    0.031 {built-in method builtins.exec}
+        1    0.000    0.000    0.032    0.032 <string>:1(<module>)
+        1    0.000    0.000    0.032    0.032 homework_4_1.py:70(second_example)
+        1    0.000    0.000    0.032    0.032 {built-in method builtins.exec}
         2    0.017    0.008    0.017    0.008 {built-in method builtins.max}
         2    0.015    0.007    0.015    0.007 {built-in method builtins.min}
         1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
@@ -114,11 +114,11 @@ def third_example():
 
 #print(third_example())
 print()
-print(timeit.timeit('third_example()', number=100, globals=globals())) # SIZE 10, 0.00012309999874560162
-print(timeit.timeit('third_example()', number=100, globals=globals())) # SIZE 100, 0.0008511000050930306
-print(timeit.timeit('third_example()', number=100, globals=globals())) # SIZE 1000, 0.01411270000244258
-print(timeit.timeit('third_example()', number=100, globals=globals())) # SIZE 100000, 1.7038792000021203
-print(timeit.timeit('third_example()', number=100, globals=globals())) # SIZE 1000000, 16.956531899995753
+#print(timeit.timeit('third_example()', number=100, globals=globals())) # SIZE 10, 0.00012309999874560162
+#print(timeit.timeit('third_example()', number=100, globals=globals())) # SIZE 100, 0.0008511000050930306
+#print(timeit.timeit('third_example()', number=100, globals=globals())) # SIZE 1000, 0.01411270000244258
+#print(timeit.timeit('third_example()', number=100, globals=globals())) # SIZE 100000, 1.7038792000021203
+#print(timeit.timeit('third_example()', number=100, globals=globals())) # SIZE 1000000, 16.956531899995753
 
 cProfile.run('third_example()')
 

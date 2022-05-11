@@ -65,8 +65,8 @@ N = 1_000_000
 indx = int(input('Введите индекс простого числа: '))
 
 
-#print(f'Введеннвый индекс {indx} простого числа - {without_eratosthenes(N)}')
-#print(f'Введеннвый индекс {indx} простого числа с помощью Решето Эратосфена - {eratosthenes_sieve(N)}')
+print(f'Введеннвый индекс {indx} простого числа - {without_eratosthenes(N)}')
+print(f'Введеннвый индекс {indx} простого числа с помощью Решето Эратосфена - {eratosthenes_sieve(N)}')
 
 print(timeit.timeit('without_eratosthenes(N)', number=1, globals=globals())) # N = 1_000_000, 1.8979672999994364
 print(timeit.timeit('eratosthenes_sieve(N)', number=1, globals=globals())) # N = 1_000_000, 0.21380409999983385
